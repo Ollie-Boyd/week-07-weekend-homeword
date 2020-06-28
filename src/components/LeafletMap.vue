@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// import customMarker from '../assets/icons/station.svg'
 import LeafletMarker from "./LeafletMarker.vue"
 
 export default {
@@ -18,7 +17,6 @@ export default {
     },
     data(){
       return {
-        // customMarker,
         url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
         attribution:
           '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
