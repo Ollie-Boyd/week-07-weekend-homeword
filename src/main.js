@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { LMap, LTileLayer, LMarker, LIcon } from 'vue2-leaflet';
+import { LMap, LTileLayer, LMarker, LIcon, LPopup } from 'vue2-leaflet';
 import { Icon } from 'leaflet';
 
 delete Icon.Default.prototype._getIconUrl;
@@ -18,6 +18,7 @@ Vue.component('l-map', LMap);
 Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
 Vue.component('l-icon', LIcon);
+Vue.component('l-popup', LPopup);
 
 
 

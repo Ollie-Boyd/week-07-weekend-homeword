@@ -67,5 +67,7 @@ body{
 #l-map {
   height: 1000px;
   width: 1000px;
+  
 }
+
 </style>
