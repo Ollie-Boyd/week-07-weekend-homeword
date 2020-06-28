@@ -6,15 +6,15 @@
 
 <script>
 
-import LeafletMap from "./components/LeafletMap";
+import LeafletMap from "./components/LeafletMap"
 
 
 export default {
   name: 'App',
   components: {
     "leaflet-map": LeafletMap
-  
-  }, 
+  }
+  , 
   data(){
     return {
       stationsLive: []
