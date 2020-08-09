@@ -1,5 +1,10 @@
 # Just-Eat Bikes availability map
 
+### Screenshots of the finished project
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ollie-Boyd/JustEat-bikes-mapping-with-Leaflet.js-and-Vue.js/master/screenshots/just-eat.png" width=80% height=auto%>
+</p>
+
 >### Brief
 >
 >Your task is to create an application that makes a request to an API and displays the data.
@@ -22,10 +27,13 @@
 * I wanted the data displayed on the screen to be somewhat realtime, and I needed to figure out how to refresh the data the user saw every few minutes. Enough so the user could rely on the results' accuracy but not so much that the API was hammered with requests. 
 
 ## What I learned
-
+* To make multiple API calls I needed to use multiple promises. Initially I used nested promises which was horribly unreadable but then I read about [Promise.all](https://gomakethings.com/waiting-for-multiple-all-api-responses-to-complete-with-the-vanilla-js-promise.all-method/) and that let me make a nice refactor. 
+* To merge the data from the two requests I found [Object.merge](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) which is such a pleasingly clean way to make the merge! 
+* To refresh the data I used setTimeout to create a 1 minute delay then used recursion so the fetchStationAvailability would call itself after the delay. I couldn't find any arguments on the internet against using this solution so I hope it's OK. 
+* Vue2Leaflet had a few bugs and the support and docs weren't great. For example [this](https://stackoverflow.com/questions/50864855/vue-js-leaflet-marker-is-not-visible) bug was a real pain and the official docs still referenced the broken way of making markers. It was my first experience not using the 'normal' version of an open-source project. Reading the community guidance on how to accomplish something in the normal Leaflet.js version and translating that into the Vue version was tricky. 
 ## What I could improve on
-* Response caching
-
+* Response caching - My app would be really harsh to the Just Eat server if there were multiple users. I would need to make a proxy server that would cache the Just Eat results and only make new API requests once it received user requests and its cached copy had expired. 
+* I wouldn't use Vue2Leaflet again. I just can't quite understand the benefit of it over using Leaflet.js in Vue. Vue2Leaflet is a bit buggy and I think there would be more crossover benefit to other projects in learning normal Leaflet. 
 
 
 ## Project setup
