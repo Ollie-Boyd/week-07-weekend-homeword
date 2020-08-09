@@ -5,7 +5,6 @@
 >Your task is to create an application that makes a request to an API and displays the data.
 >
 >Suggested APIs:
->
 >1. Studio Ghibli: https://ghibliapi.herokuapp.com/
 >2. Reddit: (Append `.json` to any Reddit URL - for example https://www.reddit.com/r/javascript.json)
 >3. Guardian search: https://content.guardianapis.com/search?q=brexit&format=json&api-key=test
